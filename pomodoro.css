@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+  user-select: none;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  /* font-family: "Open Sans", sans-serif; */
+  justify-content: center;
+  min-width: 84px;
+}
+
+#pomodoro {
+  max-width: 400px;
+  width: 100%;
+}
+
+#pomodoro #p-clock {
+  background: url(https://joeweaver.me/codepenassets/freecodecamp/challenges/build-a-pomodoro-clock/bg.png)
+    no-repeat center center;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  /* overflow: hidden;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default; */
+  margin-top: -20px;
+}
+
+@media all and (min-width: 512px) {
+  #pomodoro #p-clock {
+    padding: 120px 0;
+  }
+}
+
+@media all and (max-width: 184px) {
+  #pomodoro #p-clock {
+    margin-bottom: -20px;
+    margin-bottom: -11.5px;
+    padding: 73px 0;
+  }
+}
+
+#pomodoro #p-clock #p-timer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* #pomodoro #p-clock #p-timer #p-title {
+    color: #ff8b8a;
+    font-size: 1rem;
+    line-height: 28px;
+    margin: 3px 0 1px;
+  } */
+
+/* @media all and (max-width: 512px) {
+    #pomodoro #p-clock #p-timer #p-title {
+      font-size: 2.5vw;
+      line-height: 2.5vw;
+    }
+  }
+  
+  @media all and (max-width: 184px) {
+    #pomodoro #p-clock #p-timer #p-title {
+      font-size: 10px;
+      line-height: 10px;
+    }
+  } */
+
+#pomodoro #p-clock #p-timer #p-countdown {
+  color: #ff778d;
+  display: flex;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 43px;
+}
+
+#filler {
+  background: #ddffcc;
+  height: 0px;
+  width: 200px;
+  position: absolute;
+  bottom: 0;
+}
+
+#buttons button {
+  background: rgb(179, 85, 109);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px;
+  width: 85px;
+  margin: 20px auto;
+  font-size: 13px;
+  height: 30px;
+  border-radius: 50px;
+  margin-top: -80px;
+  margin-right: 10px;
+}
+
+/* @media all and (max-width: 512px) {
+    #pomodoro #p-clock #p-timer #p-countdown {
+      font-size: 4.4vw;
+      line-height: 4.4vw;
+    }
+  }
+  
+  @media all and (max-width: 184px) {
+    #pomodoro #p-clock #p-timer #p-countdown {
+      font-size: 15.4px;
+      line-height: 15.4px;
+    }
+  } */
+
+/* #pomodoro #p-clock #p-timer #p-countdown #p-minutes::after {
+    content: ":";
+  } */
+
+/* #pomodoro #p-clock #p-timer #p-controls {
+    align-items: center;
+    display: flex;
+    color: #ff6292;
+    flex-direction: column;
+    font-size: .7rem;
+    font-weight: 700;
+    line-height: 15px;
+    margin-top: 5px;
+    text-align: center;
+    text-transform: uppercase;
+  } */
+
+/* #pomodoro #p-clock #p-timer #p-controls .fas,
+#pomodoro #p-clock #p-timer #p-controls .svg-inline--fa {
+  position: relative;
+}
+
+#pomodoro #p-clock #p-timer #p-controls #p-start,
+#pomodoro #p-clock #p-timer #p-controls #p-pause,
+#pomodoro #p-clock #p-timer #p-controls #p-reset {
+  white-space: nowrap;
+}
+
+#pomodoro #p-clock #p-timer #p-controls #p-start .fa-play {
+  font-size: 77%;
+  top: -1px;
+}
+
+#pomodoro #p-clock #p-timer #p-controls #p-start:hover,
+#pomodoro #p-clock #p-timer #p-controls #p-start:hover .fa-play {
+  color: darken(#ff6292, 5);
+}
+
+#pomodoro #p-clock #p-timer #p-controls #p-pause .fa-pause {
+  font-size: 90%;
+  top: -1px;
+  transform: scaleX(0.84);
+}
+
+#pomodoro #p-clock #p-timer #p-controls #p-pause:hover,
+#pomodoro #p-clock #p-timer #p-controls #p-pause:hover .fa-pause {
+  color: darken(#ff6292, 5);
+}
+
+#pomodoro #p-clock #p-timer #p-controls #p-reset {
+  position: absolute;
+  margin-top: 17.56px;
+  transition: margin-top 0.43s, opacity 0.43s;
+}
+
+#pomodoro #p-clock #p-timer #p-controls #p-reset .fa-sync-alt {
+  font-size: 84%;
+}
+
+#pomodoro #p-clock #p-timer #p-controls #p-reset:hover,
+#pomodoro #p-clock #p-timer #p-controls #reset:hover .fa-sync-alt {
+  color: darken(#ff6292, 5);
+}
+
+#pomodoro #p-clock #p-timer #p-controls.p-reset #pause {
+  display: none;
+}
+
+#pomodoro #p-clock #p-timer #p-controls.reset #p-reset {
+  margin-top: 0;
+  opacity: 0;
+  z-index: -1;
+}
+
+#pomodoro #p-clock #p-timer #p-controls.started #p-start {
+  display: none;
+}
+
+#pomodoro #p-clock #p-timer #p-controls.started #p-reset {
+  opacity: 0;
+}
+
+#pomodoro #p-clock #p-timer #p-controls.paused #p-pause {
+  display: none;
+}
+
+@media all and (max-width: 512px) {
+  #pomodoro #clock #p-timer #p-controls {
+    font-size: 5.5vw;
+    line-height: 5.5vw;
+  }
+  #pomodoro #clock #p-timer #p-controls #p-start,
+  #pomodoro #clock #p-timer #p-controls #p-pause,
+  #pomodoro #clock #p-timer #p-controls #p-reset {
+    font-size: 3vw;
+    line-height: 3vw;
+  }
+  #pomodoro #clock #p-timer #p-controls #p-reset {
+    margin-top: 3.43vw;
+  }
+}
+
+@media all and (max-width: 184px) {
+  #pomodoro #clock #p-timer #p-controls {
+    font-size: 10px;
+    line-height: 10px;
+  }
+  #pomodoro #clock #p-timer #p-controls #p-start,
+  #pomodoro #clock #p-timer #p-controls #p-pause,
+  #pomodoro #clock #p-timer #p-controls #p-reset {
+    font-size: 5.5px;
+    line-height: 5.5px;
+  }
+  #pomodoro #clock #p-timer #p-controls #p-reset {
+    margin-top: 6.31px;
+  }
+} */

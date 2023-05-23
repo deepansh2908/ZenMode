@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <!-- <link
+      href="https://fonts.googleapis.com/css?family=Merienda"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="music-player.css" />
+    <link rel="stylesheet" href="water.css" />
+    <link rel="stylesheet" href="pomodoro.css" />
+    <link rel="stylesheet" href="todo.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>ZenMode</title>
+  </head>
+  <body>
+    <header>
+      <h2>Zen<span style="color: black">Mode</span></h2>
+    </header>
+
+    <main>
+      <div class="left">
+        <!-- <div class="left-upper">ye pakk dwkfb</div> -->
+        <div class="left-lower" style="margin-top: 8rem">
+          <div id="pomodoro">
+            <div id="p-clock">
+              <div id="p-timer">
+                <div id="p-countdown">
+                  <span id="p-minutes">25</span>
+                  <span id="p-colon">:</span>
+                  <span id="p-seconds">00</span>
+                </div>
+                <div id="filler"></div>
+              </div>
+            </div>
+            <div id="buttons">
+              <button id="work">Work</button>
+              <button id="shortBreak">Short Break</button>
+              <button id="longBreak">Long Break</button>
+              <button id="stop">Stop</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="right-upper">
+          <div class="water-quote">
+            <h2>Stay hydrated, Stay focused, Stay sharp</h2>
+          </div>
+          <div class="water-container">
+            <button class="water-btn" id="decrementBtn">
+              <i class="fa-solid fa-minus"></i>
+            </button>
+            <div class="water">
+              <img src="images/water.png" alt="" />
+              <h2 class="water-text">0</h2>
+            </div>
+            <button class="water-btn" id="incrementBtn">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+        </div>
+        <div class="right-lower">
+          <div class="container">
+            <div class="left-side">
+              <img src="images/150d7767840941.5b47bdfa76c00.jpg" alt="" />
+            </div>
+            <div class="right-side">
+              <h1><span id="heading">Serenade Your Senses</span></h1>
+              <div class="music-container">
+                <div class="music-info">
+                  <h4 id="title">Name of the song</h4>
+                  <div class="progress-container">
+                    <div class="progress"></div>
+                  </div>
+                </div>
+                <audio src="music/black-coffee.mp3" id="audio"></audio>
+                <div class="image-container">
+                  <img
+                    src="images/black-coffee.jfif"
+                    alt="Song Cover"
+                    id="image-cover"
+                  />
+                </div>
+                <div class="navigation">
+                  <button id="shuffle" class="action-btn">
+                    <i
+                      id="shuffleBtn"
+                      class="material-icons"
+                      title="Playlist Looped"
+                      >repeat</i
+                    >
+                  </button>
+                  <button id="prev" class="action-btn">
+                    <i class="fas fa-backward" title="Previous Song"></i>
+                  </button>
+                  <button id="play" class="action-btn action-btn-big">
+                    <i class="fas fa-play-circle" title="Play"></i>
+                  </button>
+                  <button id="next" class="action-btn">
+                    <i class="fas fa-forward" title="Next Song"></i>
+                  </button>
+                  <button id="list" class="action-btn">
+                    <i class="material-icons" title="Music List">queue_music</i>
+                  </button>
+                </div>
+                <div class="music-list">
+                  <div class="music-header">
+                    <div class="music-row">
+                      <i class="material-icons">queue_music</i>
+                      <span> Queue</span>
+                      <button id="close">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <ul></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="water.js"></script>
+    <script src="pomodoro.js"></script>
+    <!-- <script src="todo.js"></script> -->
+    <script src="music-player.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
