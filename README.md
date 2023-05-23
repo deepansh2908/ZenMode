@@ -20,3 +20,5 @@ Start the server
 `node app.js`
 
 ## Screenshots
+![img](https://github.com/deepansh2908/ZenMode/assets/133380229/a7b8fce9-3403-4158-a6b5-8138b7827138)
+
